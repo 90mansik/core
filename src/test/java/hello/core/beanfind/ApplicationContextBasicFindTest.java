@@ -37,7 +37,7 @@ public class ApplicationContextBasicFindTest {
 
     @Test
     @DisplayName("빈 이름으로 조회X")
-    void findBeanByNameX(){
+    void findBeanByNameX(){     
         assertThrows(NoSuchBeanDefinitionException.class,
                 () -> ac.getBean("xxxx", MemberService.class));
     }
