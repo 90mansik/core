@@ -26,7 +26,6 @@ public class ComponentFilterAppConfigTest {
     @DisplayName("beanB는 컴포넌트 스캔이 되지 않는다.")
     void filterScan2(){
         ApplicationContext ac = new AnnotationConfigApplicationContext(ComponentFilterAppConfig.class);
-        BeanB beanB = ac.getBean("beanB", BeanB.class);
 
         assertThrows(
                 NoSuchBeanDefinitionException.class
